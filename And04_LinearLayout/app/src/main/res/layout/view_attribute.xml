@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <!-- wrap_content는 위젯이 가지는 기본 크기, 위젯의 자식요소가 커지면 같이 커짐-->
+    <LinearLayout
+        android:background="#122"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <Button
+        android:layout_margin="10dp"
+        android:text="마진 Wrap_content\n aaaa \n aaaaAAA"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"/>
+        <!--짤림...-->
+    </LinearLayout>
+    <Button
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="20dp"
+        android:text="마진 방향 주기"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:padding="20dp"
+        android:text="패딩 주기"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:paddingLeft="50dp"
+        android:text="패딩 방향 주기"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:visibility="visible"
+        android:text="가시성"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:visibility="invisible"
+        android:text="가시성 (공간을 차지하고 안보임)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:visibility="gone"
+        android:text="가시성 (공간을 차지하지 않고 안보임)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <!--gravity :  내부에 있는 자식 요소에 중력(방향)을 적용함
+        layout_gravity : 부모 요소에 나의 위치를 변경시킴
+        Linear : 방향성에 의해서 상하, 좌우로만 이동이 가능함(리니어의 규칙성)
+        Relative : 부모 기준으로 정렬 규칙이 이미 있음(layout_gravity 필요 없음)
+        ImageView : src-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground"/>
+    <RelativeLayout
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:background="#B4B5B9"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp">
+
+        <Button
+            android:gravity="top|right"
+            android:text="gravity"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <Button
+            android:layout_marginLeft="100dp"
+            android:gravity="top|right"
+            android:text="gravity"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+    </RelativeLayout>
+
+</LinearLayout>
