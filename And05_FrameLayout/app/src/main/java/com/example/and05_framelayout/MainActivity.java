@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn_before, btn_after; // null
     ImageView imgV1, imgV2, imgV3; // null -> 객체를 이런 이름으로 사용하겠다(선언)
-
+    int imgFlag;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +29,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //여기서 이벤트 처리
+            }
+        });
+
+
+        btn_before.setOnClickListener(v -> {
+//            imgV1.setImageResource(R.drawable.img1);
+            imgFlag++;
+            if(imgFlag==4) imgFlag =1;
+            imgV1.setVisibility(View.GONE);
+            imgV2.setVisibility(View.GONE);
+            imgV3.setVisibility(View.GONE);
+            if(imgFlag==1){
+                imgV1.setVisibility(View.VISIBLE);
+            } else if(imgFlag==2){
+                imgV2.setVisibility(View.VISIBLE);
+            } else if(imgFlag==3){
+                imgV3.setVisibility(View.VISIBLE);
             }
         });
 

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KmjBlack</string>
+    <string name="version">v.1.1</string>
+    <string name="server_ip">192.168.0.46</string>
+</resources>
