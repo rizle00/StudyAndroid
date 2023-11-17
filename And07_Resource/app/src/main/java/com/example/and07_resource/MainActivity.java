@@ -5,15 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "kmj";
+    TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.shape_layout);
+        setContentView(R.layout.carrot);
+        textView = textView.findViewById(R.id.text1);
+        textView.append("./r/n #3526967");
 
-        Log.d(TAG, "String res: " + R.string.version);
-        Log.d(TAG, "String res: " + getString(R.string.server_ip));
+
     }
 }
