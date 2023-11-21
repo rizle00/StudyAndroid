@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    
+    <style name="carrot_top_linear">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    
+    <style name="carrot_top_imgv">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <style name="carrot_top_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#0A0B0D</item>
+    </style>
+
+    <style name="carrot_guide_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">#EDEEEF</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+
+    </style>
+
+    <style name="carrot_main_tv">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#15202C</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">20dp</item>
+    </style>
+
+    <style name="carrot_sub_tc" parent="carrot_main_tv">
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">10dp</item>
+
+    </style>
+
+<!--
+
+<LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_menu1"/>
+        <TextView
+            android:textColor="#212121"
+            =""
+            =""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비즈프로필 관리"/>
+    </LinearLayout>
+
+<TextView
+            android:id="@+id/text1"
+            =""
+            =""
+            =""
+            android:layout_marginTop="5dp"
+            =""
+            =""
+            android:text="나의 당근"/>
+
+<View
+
+        android:padding="10dp"
+        android:layout_below="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+       =""/>
+
+    <LinearLayout
+        =""
+        =""
+        ="">
+        <ImageView
+            =""
+            =""
+            android:src="@drawable/ic_top_menu1"/>
+        <TextView
+            =""
+            android:layout_width=""
+            android:layout_height=""
+            android:text="판매내역"/>
+
+    </LinearLayout>
+
+    RGB : Red, Green, Blue
+    #RGB
+    #RRGGBB
+    #RRGGBBAA (Alpah 투명도)
+-->
+
+</resources>
