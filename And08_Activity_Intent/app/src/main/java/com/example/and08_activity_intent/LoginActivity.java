@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class LoginActivity extends AppCompatActivity {
     EditText edt_id, edt_pw;
     Button btn_login;
@@ -27,6 +29,8 @@ public class LoginActivity extends AppCompatActivity {
         tv_join.setOnClickListener(v -> {
             Intent intent = new Intent(this, JoinActivity.class);
             startActivity(intent);
+
+
         });
 
         //editText에 있는 글자를 가져오는 메소드 : editText.getText()
@@ -48,9 +52,20 @@ public class LoginActivity extends AppCompatActivity {
             String pw = String.valueOf(edt_pw.getText());
             if(id.equals("admin")&&pw.equals("admin1234")){
                 Log.d("로그인", "onCreate: 로그인 성공");
+                LoginDTO dto = new LoginDTO(edt_id.getText().toString(), edt_pw.getText().toString());
+
+                ArrayList<LoginDTO> list = new ArrayList<>();
+                list.add(new LoginDTO("id1", "pw1"));
+                list.add(new LoginDTO("id2", "pw2"));
+
                 Intent intent = new Intent(this, MainActivity.class);
                 //(LoginActivity.)this -> 현재 위치이므로 생략 가능
+                intent.putExtra("strkey", "테스트 데이터 스트링");
+                intent.putExtra("intkey", 1234);
+                intent.putExtra("dtokey", dto);
+                intent.putExtra("listkey",list);// dto가 직렬화가 되어있기 때문에 가능, List<직렬화> == List<로그인클래스>
                 startActivity(intent);
+                finish();// 현재 액티비티 종료
             }
              else{
                 Log.d("로그인", "onCreate: 실패");
