@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/btn_frag1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="프레그먼트 붙이기"/>
+    <Button
+        android:id="@+id/btn_frag2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="프레그먼트 붙이기2"/>
+
+    <Button
+        android:id="@+id/btn_frag3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="프레그먼트 붙이기3"/>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#123">
+
+    </FrameLayout>
+
+</LinearLayout>
