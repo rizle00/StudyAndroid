@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecyclerActivity"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_look"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/imgv_coupon"
+            android:scaleType="fitXY"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@+id/btn_look"
+            android:src="@drawable/lay1"/>
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@+id/imgv_coupon"
+            android:src="@drawable/lay2"/>
+        <ImageView
+            android:id="@+id/imgv_search"
+            android:scaleType="fitXY"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/lay3"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/tv_home"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="홈"
+            android:textSize="20dp"
+            android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/tv_rMusic"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="최신음악"
+            android:textSize="20dp"
+            android:textAlignment="center"/>
+        <TextView
+        android:id="@+id/tv_chart"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="멜론차트"
+        android:textSize="20dp"
+        android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/tv_video"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="뮤직비디오"
+            android:textSize="20dp"
+            android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/tv_ticket"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="티켓"
+            android:textSize="20dp"
+            android:textAlignment="center"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOP100"/>
+        <Button
+            android:id="@+id/btn_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HOP100"/>
+    </LinearLayout>
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="12:00"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/container">
+
+    </FrameLayout>
+
+</LinearLayout>

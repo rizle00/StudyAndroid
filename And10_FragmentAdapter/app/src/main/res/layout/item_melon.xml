@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/lay5"
+            android:id="@+id/imgv_melon"/>
+        <TextView
+
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_toRightOf="@+id/imgv_melon"
+            android:id="@+id/tv_rank"/>
+      <ImageView
+          android:id="@+id/imgv_updown"
+          android:layout_width="10dp"
+          android:layout_height="5dp"
+          android:layout_below="@+id/tv_rank"
+          android:layout_toRightOf="@id/imgv_melon"
+          android:src="@drawable/lay1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:id="@+id/tv_title"
+            android:layout_toRightOf="@id/tv_rank"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="singer"
+            android:id="@+id/tv_singer"
+            android:layout_below="@id/tv_title"
+            android:layout_toRightOf="@id/tv_rank"
+            android:layout_marginLeft="10dp"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/lay1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:id="@+id/imgv_play"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
