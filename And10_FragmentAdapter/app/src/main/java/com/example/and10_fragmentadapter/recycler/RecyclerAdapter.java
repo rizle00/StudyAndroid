@@ -46,7 +46,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.KmjVie
         h.imgv_lay.setImageResource(list.get(i).getImgRes());
         h.tv_name.setText(list.get(i).getName());
         h.tv_gender.setText(list.get(i).getGender());
-        h.tv_age.setText(list.get(i).getAge());
+        h.tv_age.setText(list.get(i).getAge()+"");
 
     }
 

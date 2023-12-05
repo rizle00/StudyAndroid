@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+<!--
+    100 : 엄청 얇음
+    200 : 얇음
+    300 : 일반보다 약간 얇음
+    400 : 일반
+    500 : 미디엄
+    600 : 세미 볼드 (두껍고 진해짐)
+    700 : 볼드
+    800 ~900 : 완전 볼드
+-->
+    <font
+        android:fontStyle="normal"
+        android:font="@font/gamjaflower_regular"
+        android:fontWeight="400"/>
+
+    <font
+        android:fontStyle="normal"
+        android:font="@font/gamjaflower_regular"
+        android:fontWeight="700"/>
+<!--    웨이트 400일때, 700 일때-->
+
+</font-family>

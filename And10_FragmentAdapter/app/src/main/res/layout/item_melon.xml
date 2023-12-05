@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <RelativeLayout
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+<!--아이템은 진짜 한칸만 만듬. .한칸의 틀..-->
         <ImageView
             android:layout_marginRight="10dp"
             android:layout_width="50dp"
@@ -30,7 +27,7 @@
           android:layout_toRightOf="@id/imgv_melon"
           android:src="@drawable/lay1"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:text="title"
             android:id="@+id/tv_title"
@@ -38,7 +35,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:text="singer"
             android:id="@+id/tv_singer"
@@ -49,12 +46,12 @@
         <ImageView
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@drawable/lay1"
+            android:src="@drawable/play_img"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:id="@+id/imgv_play"/>
 
-    </RelativeLayout>
 
-</LinearLayout>
+
+</RelativeLayout>

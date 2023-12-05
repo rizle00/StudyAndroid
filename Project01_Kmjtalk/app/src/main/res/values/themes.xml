@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Project01_Kmjtalk" parent="Theme.MaterialComponents.Light">
+
+<!--        colorPrimary 액션바의 색상을 바꿈-->
+        <item name="colorPrimary">@color/main_color</item>
+
+
+<!--        시계나 알림이 있는 영역 : status_bar
+            statusBarColor : 색상 변경
+            windowLightStatusBar : 아이콘(알림) 색상 변경-->
+        <item name="android:statusBarColor">@color/main_color</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+<!--        전체 글꼴 적용-->
+        <item name="fontFamily">@font/main_font</item>
+
+    </style>
+
+    <style name="Theme.Project01_Kmjtalk" parent="Base.Theme.Project01_Kmjtalk" />
+</resources>
