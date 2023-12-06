@@ -1,5 +1,6 @@
 package com.example.project01_kmjtalk;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -18,6 +19,8 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+//        ActionBar actionBar = getSupportActionBar();
+        getSupportActionBar().hide();//액션바 숨기기 (NoActionBar의 경우 NullPointerException 발생!)
 
 //      ProgressDialog : 로딩중에 사용자가 어떤 동작을 하고 있는지 인지를 못하는 경우 프로그램을 오류나, 버그로 의심을 하고
 //        기다림을 멈춤-> 조작,  조작(x) -> 앱은 로딩 중이다(0)
