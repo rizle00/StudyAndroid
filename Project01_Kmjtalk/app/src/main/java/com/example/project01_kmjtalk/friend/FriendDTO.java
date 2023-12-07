@@ -1,6 +1,8 @@
 package com.example.project01_kmjtalk.friend;
 
-public class FriendDTO {
+import java.io.Serializable;
+
+public class FriendDTO implements Serializable {
 
     private int profileImg, subImg;
     private String name, msg;

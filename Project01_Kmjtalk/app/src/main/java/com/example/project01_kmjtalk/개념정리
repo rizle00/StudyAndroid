@@ -12,7 +12,7 @@
         // activity_main.xml
         1.ActivityMainBinding binding;
 
-        2. binding = ActivityMainBinding.inflate(getLayoutInflater());
+        2. binding = ActivityMainBinding.inflate(getLayoutInflater());  -> container에 inflate 함
         3. setContentView(binding.getRoot());
 
 2.ActionBar
@@ -41,3 +41,7 @@
 4.스크롤이 있는 뷰와 다른 레이아웃, 뷰를 동시에 스크롤이 되게 처리(NestedScrollView)
     -안드로이드에서 여러 스크롤이 가능한 요소들을 하나의 뷰 안에 겹쳐서 넣을 때 사용
     -규칙은 자식요소를 하나만 가져야함
+
+5.뷰홀더 -> 뷰가  반복되며 내용물만 다름, 뷰(틀)은 하나, 같은 뷰를 가지고 내용만 바뀜,
+6. 리스트뷰 -> 뷰가 반복되는데 다시 또 로딩함.
+LayoutInflater inflater = getLayoutInflater(); 인플레이터 초기화식

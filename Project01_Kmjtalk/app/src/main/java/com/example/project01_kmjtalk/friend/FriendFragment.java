@@ -24,7 +24,7 @@ public class FriendFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         binding = FragmentFriendBinding.inflate(inflater, container, false);
-        binding.recvFriend.setAdapter(new FreindRecvAdapter(inflater, getFriend()));
+        binding.recvFriend.setAdapter(new FreindRecvAdapter(inflater, getFriend(), getContext()));
         binding.recvFriend.setLayoutManager(new LinearLayoutManager(getContext()));
 
         return binding.getRoot();
@@ -42,5 +42,16 @@ public class FriendFragment extends Fragment {
         list.add(new FriendDTO(R.drawable.profile8, R.drawable.bg8, "재헌", "카톡 안됨 문자"));
         list.add(new FriendDTO(R.drawable.profile9, R.drawable.bg9, "한호", "아 술마시고 싶다"));
         list.add(new FriendDTO(R.drawable.profile10, R.drawable.bg10, "제이", ""));
+        list.add(new FriendDTO(R.drawable.profile1, R.drawable.bg1, "김이름", "（；´д｀）ゞ허허"));
+        list.add(new FriendDTO(R.drawable.profile2, R.drawable.bg2, "김서리", "(´。＿。｀)귤팔아요"));
+        list.add(new FriendDTO(R.drawable.profile3, R.drawable.bg3, "이사라", "한재골타고싶다"));
+        list.add(new FriendDTO(R.drawable.profile4, R.drawable.bg4, "박불곰", "크아아앙"));
+        list.add(new FriendDTO(R.drawable.profile5, R.drawable.bg5, "강기준", "💕 327"));
+        list.add(new FriendDTO(R.drawable.profile6, R.drawable.bg6, "서이", "오늘은 ..."));
+        list.add(new FriendDTO(R.drawable.profile7, R.drawable.bg7, "예림", "살아있음 w(ﾟДﾟ)w"));
+        list.add(new FriendDTO(R.drawable.profile8, R.drawable.bg8, "재헌", "카톡 안됨 문자"));
+        list.add(new FriendDTO(R.drawable.profile9, R.drawable.bg9, "한호", "아 술마시고 싶다"));
+        list.add(new FriendDTO(R.drawable.profile10, R.drawable.bg10, "제이", ""));
+        binding.tvFriendCnt.setText("친구 "+list.size());
      return list;}
 }
