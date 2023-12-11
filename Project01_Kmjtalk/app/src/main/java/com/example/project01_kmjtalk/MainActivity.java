@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import com.example.project01_kmjtalk.chat.ChatFragment;
 import com.example.project01_kmjtalk.databinding.ActivityMainBinding;
 import com.example.project01_kmjtalk.friend.FriendFragment;
+import com.example.project01_kmjtalk.opentalk.OpenTalkMainFragment;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 changeFragment(new ChatFragment());
 
             }  else if(item.getItemId()==R.id.tab3){
-
+                changeFragment(new OpenTalkMainFragment());
             }  else if(item.getItemId()==R.id.tab4){
 
             }  else if(item.getItemId()==R.id.tab5){

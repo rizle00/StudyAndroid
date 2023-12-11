@@ -44,3 +44,44 @@
 
 5.뷰홀더 -> 뷰가  반복되며 내용물만 다름, 뷰(틀)은 하나, 같은 뷰를 가지고 내용만 바뀜,
 6. 리스트뷰 -> 뷰가 반복되는데 다시 또 로딩함.
+
+LayoutInflater inflater = getLayoutInflater(); 인플레이터 초기화식
+
+7. 프래그먼트 바인딩 처리
+public class OpenTalkMainFragment extends Fragment {
+
+      FragmentOpenTalkMainBinding binding;
+      @Override
+      public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                               Bundle savedInstanceState) {
+
+          binding = FragmentOpenTalkMainBinding.inflate(inflater, container, false);
+
+          return binding.getRoot();
+      }
+  }
+
+  8.android:scrollbars="none" 스크롤바 안보이게
+  9. change fragment
+     changeFragment(new FriendFragment());
+            binding.bottomNav.setOnItemSelectedListener(item -> {
+                if(item.getItemId()==R.id.tab1){
+    //                actionBar.setTitle("친구");
+                    changeFragment(new FriendFragment());
+                } else if(item.getItemId()==R.id.tab2){
+                    changeFragment(new ChatFragment());
+
+                }  else if(item.getItemId()==R.id.tab3){
+                    changeFragment(new OpenTalkMainFragment());
+                }  else if(item.getItemId()==R.id.tab4){
+
+                }  else if(item.getItemId()==R.id.tab5){
+
+                }
+
+                actionBar.setTitle(item.getTitle());
+
+                return false;
+            });
+
+  10. ViewPager2
