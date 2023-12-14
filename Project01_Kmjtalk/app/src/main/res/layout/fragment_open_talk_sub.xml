@@ -83,5 +83,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#EAEAEA"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="☢지금 뜨는 오픈 채탱"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/chip_grp_opensub">
+
+        </com.google.android.material.chip.ChipGroup>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

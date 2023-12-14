@@ -1,0 +1,80 @@
+1. mainfrsts.xml 에 내용추가
+    -1. 인터넷 권한 설정  <uses-permission android:name="android.permission.INTERNET"/>
+    -2. http 프로토콜을 사용 <application
+                              android:usesCleartextTraffic="true"
+        -(Android에서는 보안상의 이유로 기본적으로는 http요청을 막아둠. https만 기본적으로 사용이 가능)
+        -http(www)에서 정보를 주고 받기 위한 표준 (암호화x)
+        -https (보안버전, SSL, TLS 암호화 표준 )
+
+
+2. 라이브러리 추가
+    -1 "Retrofit" : HttpClient(요청) 처리를 쉽게 가능하게 함. (Volley, OkHttp...)
+    -2  + 스칼라 컨버터 : 데이터를 단일 String으로 양쪽이 표준을 맞춤.(받을 때)
+    -3 "Gson" : 어떤 객체, 데이터를 전부 Json으로 쉽게 바꾸게 해줌.(Json -> 객체, 데이터)
+
+    =================== 실제 추가 ======================================================
+    //  Retrofit Core : Http 요청을 쉽게 하기 위한 library
+        implementation group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.9.0'
+
+    //    단일행 데이터를 받기 위한 컨버터 : 컨버터 종류 중 사용법이 제일 단순함
+        implementation group: 'com.squareup.retrofit2', name: 'converter-scalars', version: '2.9.0'
+
+    //    String Json을 객체로 변환 또는 개체를 String Json으로 변환
+        implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.9'
+    =================== 실제 추가 ======================================================
+    사용법
+    https://square.github.io/retrofit/
+
+
+3.인터페이스 추가
+
+    public interface ApiInterface {
+
+
+        @FormUrlEncoded // @Url 같이 써야함
+        @POST
+        Call<String> getData(@Url String url, @FieldMap HashMap<String, Object> params);
+
+
+    }
+     url 과 parameter 가 필요
+
+4.Retrofit 객체 생성
+    public class ApiClient {
+
+        public static Retrofit getApiClient(){
+
+            Retrofit retrofit = new Retrofit.Builder() // Retrofit.Builder로 초기화 시켜야함(Retrofit)
+                    .baseUrl("http://192.168.0.46/mid/") // 마지막 / 필요..
+    //                내 톰캣에서 프로젝트까지(index.html뜨는 주소가 base)
+                    .addConverterFactory(ScalarsConverterFactory.create())//String json 사용이 가능해짐 컨버트
+                    .build();
+            return retrofit;
+        }
+
+    }
+    url 세팅, json사용가능하게 컨버트 , 빌드
+
+5.사용하기
+    초기화 후 파라미터 세팅, 요청에 대한 반응을 처리
+    -1.ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+    -2.apiInterface.getData("vaa.and",params).enqueue(new Callback<String>() {
+                   @Override
+                   public void onResponse(Call<String> call, Response<String> response) {
+                       //응답이 있음
+                       Log.d("레트로핏", "onResponse: " +response.body());
+                       Log.d("레트로핏", "onResponse: " +response.errorBody());
+                   }
+
+                   @Override
+                   public void onFailure(Call<String> call, Throwable t) {
+       //              서버 꺼짐 등의 이유로 실패
+                       t.printStackTrace();
+                       Log.d("레트로핏", "onFailure: "+t.getMessage());
+                       Log.d("레트로핏", "onFailure: "+t.toString());
+                   }
+               });
+
+6.Gson
+    객체를 String Json으로 바꾸기 .new Gson().toJson(객체);
+    String Json 을 객체로 바꾸기 .new Gson().fromJson(String Json, 객체타입.class)

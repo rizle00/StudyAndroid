@@ -1,0 +1,61 @@
+
+
+public interface ApiInterface {
+    // 어떤 url을 요청하고 어떤 형태로 반환을 받을 건지, 파라미터 등 이 지정되어있는 설계도
+//    ApiInterface를 통해 레트로핏 전송 객체가 초기화 됨
+//    Retrofit 어노테이션 @Get, @Post
+//    Form method("get" or "post")
+
+    @FormUrlEncoded // @Url 같이 써야함
+    @POST
+    Call<String> getData(@Url String url, @FieldMap HashMap<String, Object> params);
+
+
+//    public interface GitHubService {
+//        @GET("users/{user}/repos")
+//        Call<List<Repo>> listRepos(@Path("user") String user);
+//    }
+}
+
+
+public class ApiClient {
+
+    public static Retrofit getApiClient(){
+
+        Retrofit retrofit = new Retrofit.Builder() // Retrofit.Builder로 초기화 시켜야함(Retrofit)
+                .baseUrl("http://192.168.0.46/mid/") // 마지막 / 필요..
+//                내 톰캣에서 프로젝트까지(index.html뜨는 주소가 base)
+                .addConverterFactory(ScalarsConverterFactory.create())//String json 사용이 가능해짐 컨버트
+                .build();
+        return retrofit;
+    }
+
+}
+
+ activity에서 초기화
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+//      ApiInterface가 초기화 = Retrofit객체.create(ApiInterface.class);
+        ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+
+         HashMap<String, Object> params = new HashMap<>();
+                params.put("andParam", "kmj");
+
+                apiInterface.getData("vaa.and",params).enqueue(new Callback<String>() {
+                    @Override
+                    public void onResponse(Call<String> call, Response<String> response) {
+                        //응답이 있음
+                    }
+
+                    @Override
+                    public void onFailure(Call<String> call, Throwable t) {
+        //              서버 꺼짐 등의 이유로 실패
+                    }
+                });
+        //        excute -> 사용 x
+            }
+    }
