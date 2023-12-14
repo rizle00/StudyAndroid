@@ -1,0 +1,4 @@
+
+key hash
+컴퓨터 마다 프로그램의 hash key 가 다름
+getHashKey();

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="NATIVE_APP_KEY_kakao">kakao0b40482a8ce4ed830f7550bb7002ad06</string>
+    <string name="NATIVE_APP_KEY">0b40482a8ce4ed830f7550bb7002ad06</string>
+    <string name="CLIENT_ID">JzWxuJFLvi4mozXMCbGY</string>
+    <string name="CLIENT_SECERET">JhE0awdon8</string>
+
+
+</resources>

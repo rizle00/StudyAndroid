@@ -76,5 +76,5 @@
                });
 
 6.Gson
-    객체를 String Json으로 바꾸기 .new Gson().toJson(객체);
-    String Json 을 객체로 바꾸기 .new Gson().fromJson(String Json, 객체타입.class)
+    객체를 String Json으로 바꾸기 .new Gson().toJson(객체); -> String Json
+    String Json 을 객체로 바꾸기 .new Gson().fromJson(String Json, 객체타입.class) -> 객체타입
