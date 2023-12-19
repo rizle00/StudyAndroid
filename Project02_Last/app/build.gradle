@@ -50,6 +50,11 @@ dependencies {
 
     implementation "com.kakao.sdk:v2-user:2.18.0" // 카카오 로그인 api
 
-    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
+    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'// 네비게이션바
+
+//    23.12.19 : kmj 네이버 맵 Api 추가, setting.gradle에 maven도 추가함.
+    implementation 'com.naver.maps:map-sdk:3.17.0'
+//      23.12.19 : 현재 위치나 기속도 등의 휴대폰 전반적인 위치정보를 얻어옴
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
 
 }
